@@ -1,0 +1,48 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.custom-li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  color: black;
+}
+
+.mobile-app-li::before {
+  background: linear-gradient(to right, #b86adf, #ff6c63, #ffb147);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.element-without-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.active-text {
+  position: relative;
+  color: white;
+}
+
+.line-through-gradient::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #b86adf, #ff6c63, #ffb147);
+  transform: translateY(-50%);
+  z-index: 1;
+}
